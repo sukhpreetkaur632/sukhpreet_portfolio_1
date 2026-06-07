@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Quicksand:wght@400;500;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Quicksand', Arial, sans-serif;
+  background-color: #fff5d1;
+  color: #333;
+}
+
+h1,
+h2,
+.logo {
+  font-family: 'Playfair Display', Georgia, serif;
+  letter-spacing: 1px;
+}
+
+.website {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sideNav {
+  width: 240px;
+  background-color: #ff97af;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.logo {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.logoText {
+  display: block;
+  margin-top: 35px;
+}
+
+.mushroomLogo {
+  width: 85px;
+  height: 75px;
+  background-color: #fff680;
+  border-radius: 50px 50px 22px 22px;
+  border: 3px solid #333;
+  margin: 0 auto 12px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mushroomLogo::after {
+  content: "";
+  width: 38px;
+  height: 35px;
+  background-color: #fffbe1;
+  border: 3px solid #333;
+  border-top: none;
+  position: absolute;
+  bottom: -30px;
+  border-radius: 0 0 15px 15px;
+}
+
+.mushroomLogo span {
+  font-weight: bold;
+  font-size: 22px;
+  z-index: 2;
+  color: #333;
+}
+
+.navLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #333;
+  background-color: #fff680;
+  padding: 12px;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.navLinks a:hover {
+  background-color: #e0ef70;
+}
+
+.mainArea {
+  flex: 1;
+}
+
+.page {
+  padding: 45px;
+  min-height: 80vh;
+}
+
+h1 {
+  font-size: 40px;
+  margin-top: 0;
+}
+
+.smallTitle {
+  background-color: #e0ef70;
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.homeLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.homeLayout h1 {
+  font-size: 70px;
+  line-height: 1.1;
+}
+
+.homeCard,
+.infoCard,
+.contactPanel,
+.contactForm,
+.timelineItem,
+.card {
+  background-color: #bbd18b;
+  color: #333;
+  padding: 25px;
+  border-radius: 25px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.homeCard {
+  max-width: 520px;
+  justify-self: center;
+}
+
+.button {
+  display: inline-block;
+  background-color: #ff97af;
+  color: #333;
+  padding: 12px 18px;
+  border-radius: 20px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #fff680;
+}
+
+.aboutLayout {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.profileImage {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 8px solid #ff97af;
+}
+
+.cardContainer {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 280px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.projectLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.projectLink:visited {
+  color: inherit;
+}
+
+.timeline {
+  display: grid;
+  gap: 20px;
+}
+
+.timelineItem {
+  border-left: 8px solid #ff97af;
+}
+
+.contactLayout {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 25px;
+}
+
+.contactForm input,
+.contactForm textarea {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 2px solid #ff97af;
+  border-radius: 12px;
+}
+
+.contactForm textarea {
+  height: 120px;
+}
+
+.successNote {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #ed9ac1;
+  color: #333;
+  width: 320px;
+  padding: 25px;
+  border-radius: 25px;
+  border: 3px solid #fff680;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+.closeNote {
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  border: none;
+  background: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
+}
+
+.successNote h2 {
+  margin-top: 5px;
+}
+
+
+@media screen and (max-width: 800px) {
+  .website {
+    flex-direction: column;
+  }
+
+  .sideNav {
+    width: 100%;
+  }
+
+  .homeLayout,
+  .contactLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .aboutLayout {
+    flex-direction: column;
+  }
+
+  .page {
+    padding: 25px;
+  }
+}
