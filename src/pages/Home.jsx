@@ -1,16 +1,23 @@
+// Imports tools for navigation and receiving form data from the Contact page
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 function Home() {
+  // Gets the data sent from the Contact form
   const location = useLocation();
+
+  // Allows the popup message to be removed by updating the page state
   const navigate = useNavigate();
+
   const formData = location.state;
 
+  // Clears the message after the close button is clicked
   function closeMessage() {
     navigate("/", { replace: true });
   }
 
   return (
     <section>
+      {/* Shows a success note only after the contact form is submitted */}
       {formData && (
         <div className="successNote">
           <button className="closeNote" onClick={closeMessage}>
@@ -22,6 +29,7 @@ function Home() {
         </div>
       )}
 
+      {/* Main Home page layout */}
       <div className="homeLayout">
         <div>
           <p className="smallTitle">Welcome</p>

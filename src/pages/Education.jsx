@@ -3,6 +3,7 @@ function Education() {
         <section>
             <h1>Education</h1>
 
+            {/* Timeline groups all education history in order */}
             <div className="timeline">
                 <div className="timelineItem">
                     <h2>Diploma in Software Engineering Technician</h2>

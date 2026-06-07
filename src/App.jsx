@@ -1,5 +1,7 @@
+// Imports React Router tools for navigation and page routing
 import { Routes, Route, Link } from "react-router-dom";
 
+// Imports all website page components
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
@@ -10,7 +12,9 @@ import Contact from "./pages/Contact";
 function App() {
   return (
     <div className="website">
+      {/* Sidebar navigation for the website */}
       <aside className="sideNav">
+        {/* Logo links back to the Home page */}
         <Link to="/" className="logo">
           <div className="mushroomLogo">
             <span>SP</span>
@@ -18,6 +22,7 @@ function App() {
           <span className="logoText">Sukh Portfolio</span>
         </Link>
 
+        {/* Navigation links for all pages */}
         <div className="navLinks">
           <Link to="/">Home</Link>
           <Link to="/about">About Me</Link>
@@ -30,6 +35,7 @@ function App() {
 
       <div className="mainArea">
         <main className="page">
+          {/* Routes decide which page displays based on the URL */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

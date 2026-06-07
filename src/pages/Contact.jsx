@@ -1,9 +1,12 @@
+// Imports useState for storing form input and useNavigate for redirecting pages
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Contact() {
+  // Creates a navigation function to send the user back to Home after submitting
   const navigate = useNavigate();
 
+  // Stores all contact form values
   const [contactInfo, setContactInfo] = useState({
     firstName: "",
     lastName: "",
@@ -12,6 +15,7 @@ function Contact() {
     message: "",
   });
 
+  // Updates the correct form field whenever the user types
   function handleChange(event) {
     const name = event.target.name;
     const value = event.target.value;
@@ -22,9 +26,11 @@ function Contact() {
     });
   }
 
+  // Handles the form submission
   function handleSubmit(event) {
     event.preventDefault();
 
+    // Sends the contact form data to the Home page
     navigate("/", { state: contactInfo });
   }
 
@@ -33,11 +39,12 @@ function Contact() {
       <h1>Contact Me</h1>
 
       <div className="contactLayout">
+        {/* Displays personal contact details */}
         <div className="contactPanel">
           <h2>Contact Information</h2>
 
           <p>
-            <strong>Email:</strong> sukhpreet1997fdk@gmail.com 
+            <strong>Email:</strong> sukhpreet1997fdk@gmail.com
           </p>
 
           <p>
@@ -49,6 +56,7 @@ function Contact() {
           </p>
         </div>
 
+        {/* Contact form for collecting user information */}
         <form onSubmit={handleSubmit} className="contactForm">
           <input
             type="text"
